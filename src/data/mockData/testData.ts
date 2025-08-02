@@ -32,7 +32,7 @@ export const featuredWines: WineType[] = [
     producer: "Bordeaux",
     price: "KSh 45,000",
     image:
-      "https://images.unsplash.com/photo-1586370434639-0fe43b2d32d6?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+      "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRKIs9LWv39UfeBTBWlF0GxAdxyMpzbl38yYKyU3plnBCOIKYPRPgEbgjuIJxQluoBKy9RoDRF8EEFifaxSI9ErDfeCWs9vSVrqNhOHSQ",
     rating: 4.9,
     inStock: true,
   },
@@ -42,7 +42,7 @@ export const featuredWines: WineType[] = [
     producer: "Piedmont",
     price: "KSh 32,000",
     image:
-      "https://images.unsplash.com/photo-1598300042247-d088f8ab3a91?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+      "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcSu-XBpT_wYzPvuhHm2vgWZcKZMPjET47n2bsZ0DWD0E0rbkNwzSGvP4RGj5dpE-4nG4AKEEGjX289VAkkKHkIL38SxUVs3Xj4bOnCjDM4L",
     rating: 4.8,
     inStock: true,
   },
@@ -52,7 +52,7 @@ export const featuredWines: WineType[] = [
     producer: "Champagne",
     price: "KSh 55,000",
     image:
-      "https://images.unsplash.com/photo-1551634979-c6d80fbc7302?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+      "https://cdn.sanity.io/images/1p5qvg3x/ww/21083726dfda787895ae91bc427c83e5fb1181fa-1838x1858.jpg?rect=52,123,1735,1735&w=1920&h=1920&q=75&fit=crop&auto=format",
     rating: 4.9,
     inStock: true,
   },
@@ -62,7 +62,7 @@ export const featuredWines: WineType[] = [
     producer: "Loire Valley",
     price: "KSh 18,500",
     image:
-      "https://images.unsplash.com/photo-1586370434639-0fe43b2d32d6?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+      "https://www.fournier-pere-fils.com/en/wp-content/uploads/sites/3/2020/09/fournier_sancerre_montsdamnes_blanc_22.png",
     rating: 4.7,
     inStock: true,
   },
@@ -72,7 +72,7 @@ export const featuredWines: WineType[] = [
     producer: "Napa Valley",
     price: "KSh 85,000",
     image:
-      "https://images.unsplash.com/photo-1598300042247-d088f8ab3a91?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+      "https://www.opusonewinery.com/wp-content/uploads/2022/03/OpusOne_2018_Domestic_750ml-1.jpg",
     rating: 4.9,
     inStock: false,
   },
@@ -81,8 +81,7 @@ export const featuredWines: WineType[] = [
     name: "Krug Grande Cuvée",
     producer: "Champagne",
     price: "KSh 42,000",
-    image:
-      "https://images.unsplash.com/photo-1551634979-c6d80fbc7302?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+    image: "https://ik.imagekit.io/drinksvine/products/krug-grande-cuvee.webp",
     rating: 4.8,
     inStock: true,
   },
