@@ -32,7 +32,7 @@ const Navigation: React.FC<NavigationProps> = ({
         <button
           key={item}
           onClick={() => handleItemClick(item)}
-          className="text-slate-700 hover:text-amber-900 transition-colors font-medium"
+          className="text-white hover:text-amber-900 transition-colors font-medium"
         >
           {item}
         </button>

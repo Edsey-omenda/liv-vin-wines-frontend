@@ -23,14 +23,6 @@ export const heroSlides: HeroSlide[] = [
     subtitle: "Join our expert-led tastings and discover your perfect wine",
     cta: "Book a Tasting",
   },
-  {
-    id: 3,
-    image:
-      "https://images.unsplash.com/photo-1584464491033-06628f3a6b7b?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80",
-    title: "LIV VIN Wine Club",
-    subtitle: "Monthly curated selections delivered to your doorstep",
-    cta: "Join Now",
-  },
 ];
 
 export const featuredWines: WineType[] = [
