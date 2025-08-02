@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Wine } from "lucide-react";
+import { Logo } from "../Header";
 
 interface FooterProps {
   onNewsletterSubmit?: (email: string) => void;
@@ -35,13 +35,12 @@ export const Footer: React.FC<FooterProps> = ({ onNewsletterSubmit }) => {
   ];
 
   return (
-    <footer className="bg-slate-900 text-white py-16">
+    <footer className="bg-slate-900 text-white py-10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="col-span-1 md:col-span-2">
             <div className="flex items-center space-x-2 mb-6">
-              <Wine className="h-8 w-8 text-amber-600" />
-              <span className="text-2xl font-bold tracking-tight">LIV VIN</span>
+              <Logo />
             </div>
             <p className="text-slate-300 font-light leading-relaxed mb-6">
               Discover exceptional wines from around the world. Curated by

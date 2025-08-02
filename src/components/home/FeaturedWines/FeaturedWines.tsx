@@ -20,7 +20,7 @@ const FeaturedWines: React.FC<FeaturedWinesProps> = ({
   onViewAll,
 }) => {
   return (
-    <section className="py-20 bg-white">
+    <section className="py-10 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-light text-slate-900 mb-4">{title}</h2>
@@ -38,7 +38,7 @@ const FeaturedWines: React.FC<FeaturedWinesProps> = ({
             onClick={onViewAll}
             className="inline-flex items-center text-slate-900 hover:text-amber-900 transition-colors group"
           >
-            <span className="text-lg font-medium">View All Wines</span>
+            <span className="text-xl font-medium">View All Wines</span>
             <ChevronRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
           </button>
         </div>

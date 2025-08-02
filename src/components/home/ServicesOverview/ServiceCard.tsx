@@ -1,4 +1,3 @@
-// components/ServiceCard.tsx
 import React from "react";
 import { ChevronRight } from "lucide-react";
 import type { ServiceItem } from "../types";
@@ -34,12 +33,12 @@ export const ServiceCard: React.FC<ServiceCardProps> = ({
       <h3 className="text-2xl font-medium text-slate-900 mb-4">
         {service.title}
       </h3>
-      <p className="text-slate-600 mb-6 font-light leading-relaxed">
+      <p className="text-slate-600 text-lg mb-6 font-light leading-relaxed">
         {service.description}
       </p>
       <button
         onClick={handleClick}
-        className={`${service.colorClass.replace(
+        className={`text-lg ${service.colorClass.replace(
           "bg-",
           "text-"
         )} hover:${service.hoverColorClass.replace(
