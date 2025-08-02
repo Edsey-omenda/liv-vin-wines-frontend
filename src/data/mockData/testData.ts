@@ -9,22 +9,47 @@ import type {
 export const heroSlides: HeroSlide[] = [
   {
     id: 1,
-    image:
-      "https://images.unsplash.com/photo-1547595628-c61a29f496f0?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80",
+    image: "/images/hero/IMG_1357.jpg",
     title: "Discover Exceptional Wines",
     subtitle: "Curated collection of premium wines from around the world",
     cta: "Shop Wines Now",
   },
   {
     id: 2,
-    image:
-      "https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80",
+    image: "/images/hero/IMG_1429.jpg",
     title: "Wine Tasting Experience",
     subtitle: "Join our expert-led tastings and discover your perfect wine",
     cta: "Book a Tasting",
   },
+  {
+    id: 3,
+    image: "/images/hero/IMG_1511.jpg",
+    title: "Premium Wine Collection",
+    subtitle: "Handpicked selections from renowned vineyards worldwide",
+    cta: "Explore Collection",
+  },
+  {
+    id: 4,
+    image: "/images/hero/IMG_1535.jpg",
+    title: "Wine Bar Experience",
+    subtitle: "Relax and enjoy our carefully curated wine selections",
+    cta: "Visit Wine Bar",
+  },
+  {
+    id: 5,
+    image: "/images/hero/IMG_2822.jpg",
+    title: "Exclusive Wine Events",
+    subtitle: "Join our sommelier-led events and wine pairing dinners",
+    cta: "View Events",
+  },
+  {
+    id: 6,
+    image: "/images/hero/IMG_2838.jpg",
+    title: "Wine Club Membership",
+    subtitle: "Get exclusive access to rare wines and member benefits",
+    cta: "Join Wine Club",
+  },
 ];
-
 export const featuredWines: WineType[] = [
   {
     id: 1,

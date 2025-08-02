@@ -4,25 +4,50 @@ import { ImageCarousel } from "./ImageCarousel";
 import { HeroVideo } from "./HeroVideo";
 
 export const HeroSection: React.FC = () => {
-  const [showVideo, setShowVideo] = useState(false);
+  const [showVideo, setShowVideo] = useState(true);
 
-  // Example video data
-  const heroVideoData = {
-    videoSrc: "/videos/hero-video.mp4",
-    posterImage: "/images/video-poster.jpg",
-    title: "Experience Premium Wines",
-    subtitle: "Discover our collection of carefully curated wines",
-    ctaText: "Watch Our Story",
-  };
+  const heroVideoData = [
+    {
+      id: 1,
+      videoSrc: "/videos/Liv Vin drone_1.mp4",
+      title: "Premium Wine Experience",
+      subtitle: "Discover exceptional wines from our curated collection",
+      ctaText: "Explore Wines",
+    },
+    {
+      id: 2,
+      videoSrc: "/videos/Liv Vin wine.mp4",
+      title: "Expert Wine Tastings",
+      subtitle: "Join our sommelier-led tastings and wine experiences",
+      ctaText: "Book Tasting",
+    },
+  ];
 
   const handleVideoToggle = () => {
     setShowVideo(!showVideo);
   };
 
+  const handleCtaClick = (videoId: number) => {
+    console.log(`CTA clicked for video ${videoId}`);
+    // Handle different actions based on which video is active
+    if (videoId === 1) {
+      // Navigate to wine shop
+    } else if (videoId === 2) {
+      // Navigate to tastings page
+    }
+  };
+
   return (
     <>
       {showVideo ? (
-        <HeroVideo {...heroVideoData} onCtaClick={handleVideoToggle} />
+        <HeroVideo
+          videos={heroVideoData}
+          onCtaClick={handleCtaClick}
+          autoPlay={true}
+          muted={true}
+          loop={false}
+          switchInterval={60000}
+        />
       ) : (
         <ImageCarousel slides={heroSlides} autoPlay={true} interval={5000} />
       )}
