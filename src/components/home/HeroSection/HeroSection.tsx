@@ -9,18 +9,19 @@ export const HeroSection: React.FC = () => {
   const heroVideoData = [
     {
       id: 1,
-      videoSrc: "/videos/Liv Vin drone_1.mp4",
+      videoSrc:
+        "https://res.cloudinary.com/dpd93buvd/video/upload/v1754767400/Liv_Vin_wine_xgyj5a.mp4",
       title: "Premium Wine Experience",
       subtitle: "Discover exceptional wines from our curated collection",
       ctaText: "Explore Wines",
     },
-    {
-      id: 2,
-      videoSrc: "/videos/Liv Vin wine.mp4",
-      title: "Expert Wine Tastings",
-      subtitle: "Join our sommelier-led tastings and wine experiences",
-      ctaText: "Book Tasting",
-    },
+    // {
+    //   id: 2,
+    //   videoSrc: "/videos/Liv Vin wine.mp4",
+    //   title: "Expert Wine Tastings",
+    //   subtitle: "Join our sommelier-led tastings and wine experiences",
+    //   ctaText: "Book Tasting",
+    // },
   ];
 
   const handleVideoToggle = () => {
@@ -44,8 +45,8 @@ export const HeroSection: React.FC = () => {
           videos={heroVideoData}
           onCtaClick={handleCtaClick}
           autoPlay={true}
-          muted={true}
-          loop={false}
+          muted={false}
+          loop={true}
           switchInterval={60000}
         />
       ) : (
