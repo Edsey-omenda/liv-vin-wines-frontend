@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Star, Wine } from "lucide-react";
+import { Wine } from "lucide-react";
 import type { WineType } from "../types";
 
 interface WineCardProps {
@@ -60,13 +60,13 @@ const WineCard: React.FC<WineCardProps> = ({
           </div>
         )}
 
-        {!wine.inStock && (
+        {/* {!wine.inStock && (
           <div className="absolute inset-0 bg-black/50 flex items-center justify-center">
             <span className="bg-white text-slate-900 px-4 py-2 text-sm font-medium rounded">
               Out of Stock
             </span>
           </div>
-        )}
+        )} */}
       </div>
 
       <div className="space-y-2">
@@ -76,12 +76,12 @@ const WineCard: React.FC<WineCardProps> = ({
         <h3 className="text-lg font-medium text-slate-900 group-hover:text-amber-900 transition-colors">
           {wine.name}
         </h3>
-        <div className="flex items-center space-x-2">
+        {/* <div className="flex items-center space-x-2">
           <div className="flex items-center">
             <Star className="h-4 w-4 fill-yellow-400 text-yellow-400" />
             <span className="text-md text-slate-600 ml-1">{wine.rating}</span>
           </div>
-        </div>
+        </div> */}
         <div className="flex items-center justify-between">
           <span className="text-xl font-medium text-slate-900">
             {wine.price}

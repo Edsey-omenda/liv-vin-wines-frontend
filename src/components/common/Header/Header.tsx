@@ -3,6 +3,8 @@ import Logo from "./Logo";
 import Navigation from "./Navigation";
 import UserActions from "./UserActions";
 import MobileMenu from "./MobileMenu";
+import { ROUTE_PATHS } from "../../../config/constants";
+import type { NavigationItems } from "./header.types";
 
 interface HeaderProps {
   cartItemCount?: number;
@@ -11,7 +13,7 @@ interface HeaderProps {
   onSearchClick?: () => void;
   onUserClick?: () => void;
   onCartClick?: () => void;
-  navigationItems?: string[];
+  navigationItems?: NavigationItems;
   className?: string;
 }
 
@@ -23,14 +25,14 @@ const Header: React.FC<HeaderProps> = ({
   onUserClick,
   onCartClick,
   navigationItems = [
-    "Home",
-    "About Us",
-    "Shop",
-    "Wine Tastings",
-    "Wine Bar",
-    "Wine Club",
-    "Events",
-    "Contact",
+    { label: "Home", path: ROUTE_PATHS.HOME },
+    { label: "About Us", path: ROUTE_PATHS.ABOUT },
+    { label: "Shop", path: ROUTE_PATHS.SHOP },
+    { label: "Wine Tastings", path: ROUTE_PATHS.WINE_TASTINGS },
+    { label: "Wine Bar", path: ROUTE_PATHS.WINE_BAR },
+    { label: "Wine Club", path: ROUTE_PATHS.WINE_CLUB },
+    { label: "Events", path: ROUTE_PATHS.EVENTS },
+    { label: "Contact", path: ROUTE_PATHS.CONTACT },
   ],
   className = "",
 }) => {
@@ -68,19 +70,18 @@ const Header: React.FC<HeaderProps> = ({
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? "bg-white/95 backdrop-blur-sm shadow-sm" : "bg-transparent"
+        isScrolled
+          ? "bg-white shadow-lg"
+          : "bg-gradient-to-b from-black/50 to-transparent"
       } ${className}`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <Logo onClick={handleLogoClick} />
+          <Logo onClick={handleLogoClick} isScrolled={isScrolled} />
 
           {/* Desktop Navigation */}
-          <Navigation
-            items={navigationItems}
-            onItemClick={handleNavigationClick}
-          />
+          <Navigation items={navigationItems} isScrolled={isScrolled} />
 
           {/* User Actions */}
           <UserActions
@@ -90,6 +91,7 @@ const Header: React.FC<HeaderProps> = ({
             onUserClick={onUserClick}
             onCartClick={onCartClick}
             onMenuToggle={handleMenuToggle}
+            isScrolled={isScrolled}
           />
         </div>
       </div>
@@ -100,6 +102,7 @@ const Header: React.FC<HeaderProps> = ({
         items={navigationItems}
         onItemClick={handleNavigationClick}
         onClose={handleMobileMenuClose}
+        isScrolled={isScrolled}
       />
     </header>
   );

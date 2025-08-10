@@ -115,8 +115,8 @@ export const services: ServiceItem[] = [
     description:
       "Join our expert-led tastings and discover the stories behind exceptional wines from around the world.",
     buttonText: "Book Now",
-    colorClass: "bg-amber-900",
-    hoverColorClass: "group-hover:bg-amber-800",
+    colorClass: "bg-amber-800",
+    hoverColorClass: "group-hover:bg-amber-700",
   },
   {
     icon: Users,
@@ -124,8 +124,8 @@ export const services: ServiceItem[] = [
     description:
       "Experience our curated wine bar with carefully selected wines by the glass and expertly paired small plates.",
     buttonText: "Make Reservation",
-    colorClass: "bg-red-900",
-    hoverColorClass: "group-hover:bg-red-800",
+    colorClass: "bg-red-800",
+    hoverColorClass: "group-hover:bg-red-700",
   },
   {
     icon: Award,
@@ -133,7 +133,7 @@ export const services: ServiceItem[] = [
     description:
       "Monthly curated selections delivered to your doorstep. From Nouveau to Collectors tier, find your perfect match.",
     buttonText: "Join Now",
-    colorClass: "bg-red-900",
-    hoverColorClass: "group-hover:bg-red-800",
+    colorClass: "bg-slate-800",
+    hoverColorClass: "group-hover:bg-slate-700",
   },
 ];
