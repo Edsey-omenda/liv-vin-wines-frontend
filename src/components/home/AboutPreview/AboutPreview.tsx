@@ -1,13 +1,14 @@
 // components/AboutPreview.tsx
 import React from "react";
 import { ChevronRight } from "lucide-react";
+import { useNavigate } from "react-router-dom";
+import { ROUTE_PATHS } from "../../../config/constants";
 
 interface AboutPreviewProps {
   title?: string;
   subtitle?: string;
   description?: string;
   image?: string;
-  onLearnMore?: () => void;
 }
 
 export const AboutPreview: React.FC<AboutPreviewProps> = ({
@@ -15,8 +16,13 @@ export const AboutPreview: React.FC<AboutPreviewProps> = ({
   subtitle = "LIV VIN was born from a passion for exceptional wines and the belief that great wine should be accessible to all wine lovers, from beginners to connoisseurs.",
   description = "Our team of experienced sommeliers travels the world to source the finest wines, ensuring that every bottle in our collection meets our exacting standards for quality and character.",
   image = "/images/wines/IMG_9226.JPG",
-  onLearnMore,
 }) => {
+  const navigate = useNavigate();
+
+  const goToAbout = () => {
+    navigate(ROUTE_PATHS.ABOUT);
+  };
+
   return (
     <section className="py-10 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -32,7 +38,7 @@ export const AboutPreview: React.FC<AboutPreviewProps> = ({
               {description}
             </p>
             <button
-              onClick={onLearnMore}
+              onClick={goToAbout}
               className="inline-flex items-center text-slate-900 hover:text-amber-900 transition-colors group"
             >
               <span className="text-lg font-medium">Learn More</span>

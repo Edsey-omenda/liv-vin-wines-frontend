@@ -1,6 +1,7 @@
 import React from "react";
 import { ChevronRight } from "lucide-react";
 import type { ServiceItem } from "../types";
+import { useNavigate } from "react-router-dom";
 
 interface ServiceCardProps {
   service: ServiceItem;
@@ -13,9 +14,12 @@ export const ServiceCard: React.FC<ServiceCardProps> = ({
   onButtonClick,
   className = "",
 }) => {
+  const navigate = useNavigate();
+
   const IconComponent = service.icon;
 
   const handleClick = () => {
+    navigate(service.route);
     if (onButtonClick) {
       onButtonClick(service);
     }

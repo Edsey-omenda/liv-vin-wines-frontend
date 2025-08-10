@@ -44,8 +44,8 @@ export const HeroSection: React.FC = () => {
         <HeroVideo
           videos={heroVideoData}
           onCtaClick={handleCtaClick}
-          autoPlay={true}
-          muted={false}
+          autoPlay={false} //TODO: When done coding will enable the two flags.
+          muted={true}
           loop={true}
           switchInterval={60000}
         />

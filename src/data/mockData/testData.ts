@@ -4,6 +4,7 @@ import type {
   ServiceItem,
   WineType,
 } from "../../components/home/types";
+import { ROUTE_PATHS } from "../../config/constants";
 
 //Data
 export const heroSlides: HeroSlide[] = [
@@ -117,6 +118,7 @@ export const services: ServiceItem[] = [
     buttonText: "Book Now",
     colorClass: "bg-amber-800",
     hoverColorClass: "group-hover:bg-amber-700",
+    route: ROUTE_PATHS.WINE_TASTINGS,
   },
   {
     icon: Users,
@@ -126,6 +128,7 @@ export const services: ServiceItem[] = [
     buttonText: "Make Reservation",
     colorClass: "bg-red-800",
     hoverColorClass: "group-hover:bg-red-700",
+    route: ROUTE_PATHS.WINE_BAR,
   },
   {
     icon: Award,
@@ -135,5 +138,6 @@ export const services: ServiceItem[] = [
     buttonText: "Join Now",
     colorClass: "bg-slate-800",
     hoverColorClass: "group-hover:bg-slate-700",
+    route: ROUTE_PATHS.WINE_CLUB,
   },
 ];

@@ -24,4 +24,5 @@ export interface ServiceItem {
   buttonText: string;
   colorClass: string;
   hoverColorClass: string;
+  route: string;
 }

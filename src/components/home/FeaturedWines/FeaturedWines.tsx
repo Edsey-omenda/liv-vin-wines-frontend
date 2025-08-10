@@ -3,13 +3,14 @@ import { ChevronRight } from "lucide-react";
 import WineCard from "./WineCard";
 import { featuredWines } from "../../../data/mockData/testData";
 import type { WineType } from "../types";
+import { useNavigate } from "react-router-dom";
+import { ROUTE_PATHS } from "../../../config/constants";
 
 interface FeaturedWinesProps {
   wines?: WineType[];
   title?: string;
   subtitle?: string;
   onAddToCart?: (wine: WineType) => void;
-  onViewAll?: () => void;
 }
 
 const FeaturedWines: React.FC<FeaturedWinesProps> = ({
@@ -17,8 +18,13 @@ const FeaturedWines: React.FC<FeaturedWinesProps> = ({
   title = "Featured Wines",
   subtitle = "Carefully selected wines from our sommelier",
   onAddToCart,
-  onViewAll,
 }) => {
+  const navigate = useNavigate();
+
+  const onViewAll = () => {
+    navigate(ROUTE_PATHS.SHOP);
+  };
+  
   return (
     <section className="py-10 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
