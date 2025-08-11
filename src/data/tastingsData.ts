@@ -1,9 +1,21 @@
-import type { TastingEvent, TastingPackage } from "../components/tastings/tastings.types";
+import type {
+  TastingEvent,
+  TastingPackage,
+} from "../components/tastings/tastings.types";
+
+export const tastingHeroImages = [
+  "/images/wineTasting/DSC00022.jpg",
+  "/images/wineTasting/IMG_6244.jpg",
+  "/images/wineTasting/IMG_7978.jpg",
+  "/images/wineTasting/IMG_7994.jpg",
+  "/images/wineTasting/IMG_8092.jpg",
+  "/images/wineTasting/IMG_8094.jpg",
+];
 
 export const tastingPackages: TastingPackage[] = [
   {
     name: "Discovery Tasting",
-    price:  2500,
+    price: 2500,
     duration: "1 hour",
     wines: "4 wines",
     description:

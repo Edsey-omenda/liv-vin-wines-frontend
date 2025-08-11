@@ -6,7 +6,11 @@ import {
   TastingPackageCard,
   UpcomingEvents,
 } from "../components/tastings/WineTastings";
-import { tastingPackages, upcomingEvents } from "../data/tastingsData";
+import {
+  tastingHeroImages,
+  tastingPackages,
+  upcomingEvents,
+} from "../data/tastingsData";
 
 const WineTastingsPage: React.FC = () => {
   const [selectedPackage, setSelectedPackage] = useState<number>(0);
@@ -33,8 +37,9 @@ const WineTastingsPage: React.FC = () => {
       <TastingHeroSection
         title="Wine Tastings"
         subtitle="Join our expert-led tastings and discover the stories behind exceptional wines from around the world"
-        backgroundImage="/images/wines/IMG_1927.jpg"
-        onBookClick={scrollToBooking}
+        images={tastingHeroImages}
+        buttonText="Book Now"
+        onButtonClick={scrollToBooking}
       />
 
       <section className="py-20 bg-gray-50">
