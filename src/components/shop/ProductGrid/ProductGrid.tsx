@@ -1,10 +1,10 @@
 import React, { useState } from "react";
-import type { Product } from "../products.types";
+import type { Wine as LivWine } from "../products.types";
 import { Heart, ShoppingCart, Star, Eye, Wine } from "lucide-react";
 
 interface ProductGridProps {
-  product: Product;
-  onAddToCart: (product: Product) => void;
+  product: LivWine;
+  onAddToCart: (product: LivWine) => void;
   onToggleWishlist: (productId: string) => void;
   onViewDetails: (productId: string) => void;
   isInWishlist?: boolean;
@@ -60,7 +60,7 @@ export const ProductGrid: React.FC<ProductGridProps> = ({
           </div>
         ) : (
           <img
-            src={product.image}
+            src={product?.images[0]}
             alt={product.name}
             className={`w-full h-full object-cover group-hover:scale-105 transition-all duration-500 ${
               imageLoaded ? "opacity-100" : "opacity-0"

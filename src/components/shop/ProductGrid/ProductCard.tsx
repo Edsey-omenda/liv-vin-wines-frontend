@@ -1,12 +1,12 @@
 import React from "react";
-import type { Product } from "../products.types";
+import type { Wine as LivWine } from "../products.types";
 import { ProductGrid } from "./ProductGrid";
 import { ProductList } from "./ProductList";
 
 interface ProductCardProps {
-  product: Product;
+  product: LivWine;
   viewMode: "grid" | "list";
-  onAddToCart: (product: Product) => void;
+  onAddToCart: (product: LivWine) => void;
   onToggleWishlist: (productId: string) => void;
   onViewDetails: (productId: string) => void;
   isInWishlist?: boolean;

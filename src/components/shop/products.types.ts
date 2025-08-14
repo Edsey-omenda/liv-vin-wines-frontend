@@ -1,10 +1,10 @@
-export interface Product {
+export interface Wine {
   id: string;
   name: string;
   producer: string;
   price: number;
   originalPrice?: number;
-  image: string;
+  images: string[];
   rating: number;
   reviews: number;
   vintage?: number | null;
@@ -13,6 +13,19 @@ export interface Product {
   alcohol: number;
   inStock: boolean;
   wineType: string;
+  stock: number;
+  description: string;
+  tastingNotes: {
+    appearance: string;
+    aroma: string;
+    palate: string;
+    finish: string;
+  };
+  foodPairing: string;
+  servingTemp: string;
+  drinkingWindow: string;
+  awards: string[];
+  wineMaking: string;
   grapeVariety: string[];
 }
 
