@@ -6,17 +6,17 @@ import { ProductFilters } from "../components/shop/ProductFilters/ProductFilters
 import { ProductSearch } from "../components/shop/SearchResults/ProductSearch";
 import type {
   ActiveFilters,
-  Product,
+  Wine as LivWine,
   SortOption,
 } from "../components/shop/products.types";
 import { useToast } from "../hooks/useToast";
-import { filterOptions, mockProducts } from "../data/shopData";
+import { filterOptions, winesData } from "../data/shopData";
 
 const ShopPage: React.FC = () => {
   const { showToast } = useToast();
 
   // State management
-  const [products] = useState<Product[]>(mockProducts);
+  const [products] = useState<LivWine[]>(winesData);
   const [searchTerm, setSearchTerm] = useState("");
   const [sortBy, setSortBy] = useState<SortOption>("popularity");
   const [viewMode, setViewMode] = useState<"grid" | "list">("grid");
@@ -132,7 +132,7 @@ const ShopPage: React.FC = () => {
   }, [searchTerm, activeFilters, sortBy]);
 
   // Handlers
-  const handleAddToCart = (product: Product) => {
+  const handleAddToCart = (product: LivWine) => {
     showToast(`${product.name} added to cart`, "success");
     // Add to cart logic here
   };
@@ -151,7 +151,7 @@ const ShopPage: React.FC = () => {
 
   const handleViewDetails = (productId: string) => {
     // Navigate to product details page
-    window.location.href = `/shop/${productId}`;
+    window.location.href = `/shop/product/${productId}`;
   };
 
   const handleClearFilters = () => {

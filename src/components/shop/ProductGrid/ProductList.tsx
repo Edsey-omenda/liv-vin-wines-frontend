@@ -1,10 +1,10 @@
 import React from "react";
-import type { Product } from "../products.types";
+import type { Wine as LivWine } from "../products.types";
 import { Heart, ShoppingCart, Star, Eye } from "lucide-react";
 
 interface ProductListProps {
-  product: Product;
-  onAddToCart: (product: Product) => void;
+  product: LivWine;
+  onAddToCart: (product: LivWine) => void;
   onToggleWishlist: (productId: string) => void;
   onViewDetails: (productId: string) => void;
   isInWishlist?: boolean;
@@ -39,7 +39,7 @@ export const ProductList: React.FC<ProductListProps> = ({
 
       <div className="w-32 h-40 flex-shrink-0">
         <img
-          src={product.image}
+          src={product.images[0]}
           alt={product.name}
           className="w-full h-full object-contain"
         />

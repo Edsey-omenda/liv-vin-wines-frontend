@@ -49,7 +49,7 @@ export const useRouteUtils = () => {
   };
 
   const goToTastings = () => {
-    navigate(ROUTE_PATHS.TASTINGS);
+    navigate(ROUTE_PATHS.WINE_TASTINGS);
   };
 
   const goToSignIn = (returnUrl?: string) => {
